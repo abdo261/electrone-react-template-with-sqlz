@@ -1,0 +1,14 @@
+// prisma/schema.prisma
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db" // Path to your SQLite database file
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Category {
+  id    Int     @id @default(autoincrement())
+  name  String
+}
